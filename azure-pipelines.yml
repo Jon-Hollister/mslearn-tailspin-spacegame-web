@@ -34,7 +34,7 @@ steps:
   displayName: 'Restore project dependencies'
   inputs:
     command: 'restore'
-    argument: '-f net6.0'
+    arguments: '-f net6.0'
     projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
