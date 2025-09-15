@@ -30,7 +30,7 @@ steps:
   displayName: 'Write build info'
   workingDirectory: Tailspin.SpaceGame.Web/wwwroot
 
-- script: 'dotnet restore Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj -f net6.0'
+- script: 'dotnet restore Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj -- -f net6.0'
   displayName: 'Restore project dependencies'
 
 - script: 'dotnet build Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj -f net6.0 --no-restore --configuration Release'
