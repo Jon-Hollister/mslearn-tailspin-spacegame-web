@@ -30,13 +30,13 @@ steps:
   displayName: 'Write build info'
   workingDirectory: Tailspin.SpaceGame.Web/wwwroot
 
-- script: 'dotnet restore -f net6.0 */*.csproj'
+- script: 'dotnet restore -f net6.0 Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj'
   displayName: 'Restore project dependencies'
 
-- script: 'dotnet build -f net6.0 */*.csproj --no-restore --configuration Release'
+- script: 'dotnet build -f net6.0 Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj --no-restore --configuration Release'
   displayName: 'Build the project - Release'
 
-- script: 'dotnet publish -f net6.0 */*.csproj --no-build --configuration Release --output $(Build.ArtifactStagingDirectory)/Release'
+- script: 'dotnet publish -f net6.0 Tailspin.SpaceGame.Web/Tailspin.SpaceGame.Web.csproj --no-build --configuration Release --output $(Build.ArtifactStagingDirectory)/Release'
   displayName: 'Publish the project - Release'
 
 - task: PublishBuildArtifacts@1
